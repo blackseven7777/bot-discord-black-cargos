@@ -82,7 +82,7 @@ async def resgatar(ctx, codigo: str):
     expira_em = datetime.fromisoformat(validade)
     registrar_uso(ctx.author.id, codigo, cargo.id, expira_em.isoformat())
 
-    await ctx.send(f"✅ {ctx.author.mention}, você recebeu {cargo.name}!")
+    await ctx.send(f"✅ {ctx.author.mention}, você recebeu cargo {cargo.name}!")
 
 # 🔁 REMOVER CARGO AUTOMATICO
 @tasks.loop(minutes=1)
