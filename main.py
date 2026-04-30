@@ -60,8 +60,7 @@ async def resgatar(ctx, codigo: str):
         await ctx.send("❌ Código inválido!")
         return
 
-    codigo, cargo_id, usos, max_usos, validade = data
-
+  codigo_db, cargo_id, usos, max_usos, validade = data
     if datetime.now() > datetime.fromisoformat(validade):
         await ctx.send("⛔ Código expirado!")
         return
